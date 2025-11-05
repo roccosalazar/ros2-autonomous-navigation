@@ -1,0 +1,28 @@
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+.env
+
+# --- ROS 2 / Colcon ---
+workspace/build/
+workspace/install/
+workspace/log/
+.colcon/
+colcon.meta
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS / Cache ---
+.DS_Store
+Thumbs.db
+
+# --- Docker ---
+*.log
+*.pid

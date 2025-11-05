@@ -1,0 +1,21 @@
+services:
+  ros2_gazebo:
+    build: .
+    container_name: ros2_gazebo
+    user: "ros"
+    network_mode: host
+    ipc: host
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - XDG_RUNTIME_DIR=/tmp/runtime-ros
+    devices:
+      - /dev/dri:/dev/dri
+    group_add:
+      - 992
+      - 44
+    volumes:
+      - ./workspace:/workspace
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    tty: true
+    stdin_open: true

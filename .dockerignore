@@ -1,0 +1,27 @@
+# Git
+.git
+.gitignore
+
+# ROS2 build artifacts
+workspace/build/
+workspace/install/
+workspace/log/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker-related
+*.log
+*.pid
