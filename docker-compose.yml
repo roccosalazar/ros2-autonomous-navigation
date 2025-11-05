@@ -17,6 +17,7 @@ services:
       - 44
     volumes:
       - ./workspace:/workspace
+      - ./deps_ws:/deps_ws
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
     tty: true
     stdin_open: true

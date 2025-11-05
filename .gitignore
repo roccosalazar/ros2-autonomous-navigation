@@ -10,6 +10,9 @@ __pycache__/
 workspace/build/
 workspace/install/
 workspace/log/
+deps_ws/build/
+deps_ws/install/
+deps_ws/log/
 .colcon/
 colcon.meta
 
