@@ -2,14 +2,14 @@ FROM osrf/ros:humble-desktop-full
 
 SHELL ["/bin/bash", "-c"]
 
-# Pacchetti base utili per sviluppo ROS + Gazebo
 RUN apt-get update && apt-get install -y --no-install-recommends \
     nano \
-    git \
     python3-pip \
     python3-colcon-common-extensions \
-    ros-${ROS_DISTRO}-ros-gz \
+    ros-${ROS_DISTRO}-gazebo-ros-pkgs \
+    ros-${ROS_DISTRO}-gazebo-ros \
     && rm -rf /var/lib/apt/lists/*
+
 
 # Crea utente non-root "ros"
 ARG USERNAME=ros

@@ -1,5 +1,5 @@
 services:
-  ros2_gazebo:
+  ros2:
     build: .
     container_name: ros2_gazebo
     user: "ros"
@@ -9,6 +9,7 @@ services:
       - DISPLAY=${DISPLAY}
       - QT_X11_NO_MITSHM=1
       - XDG_RUNTIME_DIR=/tmp/runtime-ros
+      - ALSOFT_DRIVERS=null    # disattiva OpenAL (audio)
     devices:
       - /dev/dri:/dev/dri
     group_add:

@@ -38,7 +38,7 @@ cd ros2-autonomous-navigation
 docker compose build
 
 # Avvia un container interattivo temporaneo
-docker compose run --rm ros2_gazebo
+docker compose run --rm ros2
 ````
 
 Dentro il container:
@@ -50,8 +50,8 @@ source /opt/ros/humble/setup.bash
 cd /workspace
 colcon build
 
-# Lancia Gazebo (nuova versione Ignition)
-ros2 launch ros_gz_sim gz_sim.launch.py
+# Lancia Gazebo Classic 11
+gazebo
 ```
 
 Il container si chiuderà automaticamente quando esci con `exit`.
@@ -71,7 +71,7 @@ docker compose build
 docker compose up -d
 
 # Apri una shell interattiva nel container
-docker compose exec ros2_gazebo bash
+docker compose exec ros2 bash
 ```
 
 Puoi aprire più terminali contemporaneamente con lo stesso comando `docker compose exec ros2_gazebo bash`.
@@ -87,8 +87,6 @@ docker compose down
 
 * Il workspace locale (`./workspace`) è montato in `/workspace` nel container.
 * ROS 2 e Gazebo sono già configurati nell'ambiente (`.bashrc` fa il source automatico).
-* I comandi `ign gazebo` e `ros2 launch ros_gz_sim gz_sim.launch.py` usano la nuova versione di Gazebo (Ignition).
-* Per usare Gazebo Classic, installare manualmente `ros-humble-gazebo-ros-pkgs`.
 
 ---
 
