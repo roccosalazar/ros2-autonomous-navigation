@@ -27,8 +27,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ros-${ROS_DISTRO}-diagnostic-aggregator \
     && rm -rf /var/lib/apt/lists/*
 
-    
-
 # Copia i file header di lightsfm in /usr/local/include/lightsfm
 COPY deps_ws/src/lightsfm/include /usr/local/include/lightsfm
 
