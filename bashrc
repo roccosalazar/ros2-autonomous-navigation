@@ -2,6 +2,7 @@
 source /opt/ros/humble/setup.bash
 export TURTLEBOT3_MODEL=waffle
 export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/opt/ros/humble/share/turtlebot3_gazebo/models # Iron and older only with Gazebo Classic
 source /usr/share/gazebo/setup.sh
 
 # Colcon autocomplete
